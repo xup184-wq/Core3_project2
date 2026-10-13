@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WINDOWLIGHT is a digital archive and three-part experiment in looking through city windows.">
+  <title>WINDOWLIGHT — Home</title>
+  <link rel="stylesheet" href="windowlight.css?v=20261013k">
+</head>
+<body data-theme="night" data-page="home">
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to daytime atmosphere" aria-pressed="false"><span class="toggle-track" aria-hidden="true"><span class="toggle-knob"></span></span><span class="theme-label" id="themeLabel">DAY / NIGHT</span></button>
+  <nav class="edge-nav" aria-label="Primary navigation">
+    <a class="active" href="./index.html" data-label="HOME">HOME</a>
+  </nav>
+
+  <main>
+    <section class="screen home-hero" aria-labelledby="homeTitle">
+      <div class="hero-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <h1 class="home-title" id="homeTitle">WINDOW<span>LIGHT</span></h1>
+    </section>
+
+    <section class="story-selector" id="stories" aria-labelledby="storiesTitle">
+      <div class="selector-head">
+        <h2 id="storiesTitle">PEEK<span>ING</span></h2>
+      </div>
+      <div class="triptych" role="group" aria-label="Three clickable panes in one window">
+        <img class="triptych-image" id="randomTriptychImage" alt="A complete three-pane city window">
+        <a class="story-pane p1" href="windowlight-story-01.html" aria-label="Open story 01 Looking"></a>
+        <a class="story-pane p2" href="windowlight-story-02.html" aria-label="Open story 02 Privacy"></a>
+        <a class="story-pane p3" href="windowlight-story-03.html" aria-label="Open story 03 Fragments"></a>
+      </div>
+    </section>
+
+    <section class="collection-stage" id="collection" aria-labelledby="collectionTitle">
+      <div class="collection-head"><h2 id="collectionTitle">TAKE A LOOK AT<br><span>HIS COMPUTER</span></h2></div>
+
+      <div class="computer-entry" id="computerEntry">
+        <img src="images/101.png" alt="A complete three-pane window with a computer visible inside the left room">
+        <svg class="computer-arrow" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 11 88 L 34.2 53.5"></path>
+          <path class="computer-arrowhead" d="M 34.2 53.5 L 30.6 56.4 M 34.2 53.5 L 32.8 58.4"></path>
+        </svg>
+        <button class="computer-hotspot" id="enterComputer" type="button" aria-label="Open the computer visible through the window"></button>
+      </div>
+
+      <div class="computer-desktop" id="computerDesktop" aria-label="Computer desktop" hidden>
+        <button class="computer-exit" id="exitComputer" type="button" aria-label="Return to the window photograph">×</button>
+
+        <div class="desktop-files" aria-label="Desktop files">
+          <button class="desktop-file" type="button" data-open-window="photosWindow">
+            <span class="folder-icon" aria-hidden="true"></span><span>Photos</span>
+          </button>
+          <button class="desktop-file" type="button" data-open-window="notesWindow">
+            <span class="note-icon" aria-hidden="true"></span><span>Notes</span>
+          </button>
+          <button class="desktop-file" type="button" data-open-window="projectWindow">
+            <span class="document-icon" aria-hidden="true"></span><span>Project Info</span>
+          </button>
+          <button class="desktop-file" type="button" data-open-window="colophonWindow">
+            <span class="document-icon" aria-hidden="true"></span><span>Colophon</span>
+          </button>
+        </div>
+
+        <section class="desktop-window photos-window" id="photosWindow" aria-labelledby="photosWindowTitle" hidden>
+          <header class="desktop-window-bar">
+            <h3 id="photosWindowTitle">Photos / 50 Windows</h3>
+            <span class="collection-status" id="openCount">0 / 5</span>
+            <button class="window-close" type="button" aria-label="Close Photos">×</button>
+          </header>
+          <div class="desktop-window-body photos-body">
+            <div class="collection-reveal">
+              <div class="collection-shutters" id="facade" aria-label="Fifty blurred city windows"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="desktop-window notes-window" id="notesWindow" aria-labelledby="notesWindowTitle" hidden>
+          <header class="desktop-window-bar"><h3 id="notesWindowTitle">Notes</h3><button class="window-close" type="button" aria-label="Close Notes">×</button></header>
+          <div class="desktop-window-body text-file">
+            <p>I started photographing windows because they interrupt the city without stopping it. Each frame holds a room for a moment, but never long enough to explain the life inside.</p>
+            <p>The project follows the uneasy distance between noticing, watching, and imagining. A window allows vision to pass while keeping bodies apart.</p>
+            <p>What looks like evidence is often only a fragment. The rest of the story belongs to the observer, not to the person behind the glass.</p>
+          </div>
+        </section>
+
+        <section class="desktop-window project-window" id="projectWindow" aria-labelledby="projectWindowTitle" hidden>
+          <header class="desktop-window-bar"><h3 id="projectWindowTitle">Project Info</h3><button class="window-close" type="button" aria-label="Close Project Info">×</button></header>
+          <div class="desktop-window-body text-file">
+            <h4>WINDOWLIGHT</h4>
+            <p>WINDOWLIGHT is a digital observation of curiosity, privacy, and projection in the city. Three stories move from the first glance, through the boundary of glass, to the fictional lives assembled from incomplete views.</p>
+            <p>The audience is invited to behave like an observer: choosing a pane, moving closer, uncovering photographs, and deciding when access becomes intrusion.</p>
+          </div>
+        </section>
+
+        <section class="desktop-window colophon-window" id="colophonWindow" aria-labelledby="colophonWindowTitle" hidden>
+          <header class="desktop-window-bar"><h3 id="colophonWindowTitle">Colophon</h3><button class="window-close" type="button" aria-label="Close Colophon">×</button></header>
+          <div class="desktop-window-body text-file colophon-grid">
+            <p><strong>Concept</strong>Looking through the public surface of private rooms.</p>
+            <p><strong>Photography</strong>Original city-window photographs.</p>
+            <p><strong>Typeface</strong>Chakra Petch, 300–600.</p>
+            <p><strong>System</strong>Four-column grid, red lines, black, white, and photographic color.</p>
+            <p><strong>Interaction</strong>Scroll, hover, drag, reveal, and day/night translation.</p>
+            <p><strong>Format</strong>Desktop-first responsive website.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="windowlight.js?v=20261013k"></script>
+</body>
+</html>
